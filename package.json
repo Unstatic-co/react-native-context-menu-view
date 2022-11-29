@@ -26,5 +26,13 @@
   "peerDependencies": {
     "react": "^16.8.1 || ^17.0.0 || ^18.0.0",
     "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "codegenConfig": {
+    "name": "react-native-context-menu-view",
+    "type": "all",
+    "jsSrcsDir": ".",
+    "android": {
+      "javaPackageName": "com.facebook.fbreact.specs"
+    }
   }
 }

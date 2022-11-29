@@ -1,16 +1,15 @@
 import React from "react";
-import { requireNativeComponent, View, Platform } from "react-native";
-
-const NativeContextMenu = requireNativeComponent("ContextMenu", null);
+import { View, Platform } from "react-native";
+import ContextMenuNativeComponent from './src/ContextMenuNativeComponent';
 
 const ContextMenu = (props) => {
   return (
-    <NativeContextMenu {...props}>
+    <ContextMenuNativeComponent {...props}>
       {props.children}
       {props.preview != null && Platform.OS === 'ios' ? (
         <View nativeID="ContextMenuPreview">{props.preview}</View>
       ) : null}
-    </NativeContextMenu>
+    </ContextMenuNativeComponent>
   );
 };
 
