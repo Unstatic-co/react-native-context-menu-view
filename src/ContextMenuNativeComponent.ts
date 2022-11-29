@@ -1,11 +1,5 @@
-import type { ViewProps } from "ViewPropTypes";
-import type { HostComponent } from "react-native";
-import codegenNativeComponent from "react-native/Libraries/Utilities/codegenNativeComponent";
+import { requireNativeComponent } from "react-native";
 
-export interface NativeProps extends ViewProps {
-    // add other props here
-}
+const ContextMenuNativeComponent = requireNativeComponent("ContextMenu");
 
-export default codegenNativeComponent<NativeProps>(
-    "ContextMenu"
-) as HostComponent<NativeProps>;
+export default ContextMenuNativeComponent;
