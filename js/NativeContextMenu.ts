@@ -1,8 +1,7 @@
-import type { TurboModule } from "react-native";
+import type { TurboModule } from 'react-native/Libraries/TurboModule/RCTExport';
 import { TurboModuleRegistry } from "react-native";
 
 export interface Spec extends TurboModule {
-    readonly getConstants: () => {};
 }
 
 export default TurboModuleRegistry.get<Spec>("ContextMenu");

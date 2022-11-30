@@ -1,6 +1,8 @@
 #import "ContextMenu.h"
 #import "ContextMenuView.h"
 
+#import "RCTFabricComponentsPlugins.h"
+
 @implementation ContextMenu
 
 RCT_EXPORT_MODULE()
@@ -27,3 +29,8 @@ RCT_CUSTOM_VIEW_PROPERTY(dropdownMenuMode, BOOL, ContextMenuView) {
 }
 
 @end
+
+Class<RCTComponentViewProtocol> ContextMenuCls(void)
+{
+  return ContextMenu.class;
+}
